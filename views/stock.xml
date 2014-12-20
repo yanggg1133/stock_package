@@ -4,7 +4,7 @@
         <record id="view_picking_package_form" model="ir.ui.view">
             <field name="name">Picking Package Form</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form" />
             <field name="arch" type="xml">
                 <field name="carrier_id" position="replace" />
                 <!-- For all companies I ever work with, the shipping method is the most important detail
@@ -17,6 +17,7 @@
                         <group string="Packages" >
                             <field name="packages" widget="one2many_list" nolabel="1" >
                                 <tree>
+				    <field name="create_date" string="Date Shipped" />
                                     <field name="tracking_number" />
 				    <field name="weight" />
                                 </tree>
