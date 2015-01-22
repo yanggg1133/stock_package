@@ -6,13 +6,13 @@
             <field name="model">stock.out.package</field>
             <field name="arch" type="xml">
                 <tree>
+		    <field name="create_date" string="Shipped Date" />
                     <field name="picking" />
                     <field name="tracking_number"/>
                 </tree>
             </field>
         </record>
 
-<!--
         <record id="action_stock_out_package" model="ir.actions.act_window">
             <field name="name">Trackable Packages</field>
             <field name="type">ir.actions.act_window</field>
@@ -22,6 +22,5 @@
         </record>
 
 	<menuitem action="action_stock_out_package" id="menu_action_stock_out_package" parent="stock.menu_stock_configuration" sequence="16" />
--->
     </data>
 </openerp>
